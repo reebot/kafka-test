@@ -43,5 +43,5 @@ func Producer(topic string) {
 }
 
 func main() {
-	Producer("your-topic-name") // Replace "your-topic-name" with the actual topic name.
+	Producer("coins") // Replace "your-topic-name" with the actual topic name.
 }
