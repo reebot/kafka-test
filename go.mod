@@ -24,6 +24,7 @@ require (
 )
 
 require (
+	github.com/go-stomp/stomp v2.1.4+incompatible
 	//github.com/shopify/sarama v1.43.0
 	github.com/klauspost/compress v1.17.7 // indirect
 	github.com/pierrec/lz4/v4 v4.1.21 // indirect
