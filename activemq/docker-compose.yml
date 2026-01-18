@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  activemq:
+    image: apache/activemq-classic:5.18.3
+    container_name: activemq
+    ports:
+      - "61616:61616"  # OpenWire protocol
+      - "61613:61613"  # STOMP protocol (used in examples)
+      - "8161:8161"    # Web Console
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: admin
+    volumes:
+      - activemq-data:/opt/apache-activemq/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8161 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - activemq-network
+
+networks:
+  activemq-network:
+    driver: bridge
+
+volumes:
+  activemq-data:

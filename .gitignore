@@ -1,1 +1,39 @@
+# Environment files
 .env
+*.env
+
+# Compiled binaries
+/out/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+
+# Go build artifacts
+*.o
+*.a
+*.out
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Dependency directories
+vendor/
+
+# Test coverage
+*.cover
+coverage.out
+
+# Temporary files
+*.tmp
+*.log
